@@ -2,10 +2,6 @@
 
 CREATE DATABASE community_journal;
 
-CREATE TABLE users
-
-
-
 CREATE TABLE users (
     user_id bigserial PRIMARY KEY,
     Fname varchar(50),
@@ -31,13 +27,11 @@ CREATE TABLE friends (
 
 
 CREATE TABLE messages (
-  message_id bigserial,
+  message_id bigserial PRIMARY KEY,
   sender_id bigserial,
   group_id bigserial ,
   content varchar(255),
-)
-
-
+);
 
 CREATE TABLE group (
   group_id bigserial,
